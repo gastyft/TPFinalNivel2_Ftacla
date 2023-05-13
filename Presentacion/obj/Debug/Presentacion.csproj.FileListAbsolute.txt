@@ -1,0 +1,12 @@
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.AgregarForm.resources
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.PaginaPrincipal.resources
