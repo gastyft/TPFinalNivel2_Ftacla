@@ -74,6 +74,18 @@
     <Compile Include="AgregarForm.Designer.cs">
       <DependentUpon>AgregarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarForm.Designer.cs">
+      <DependentUpon>EditarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarForm.Designer.cs">
+      <DependentUpon>EliminarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaginaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,23 +97,29 @@
     <EmbeddedResource Include="AgregarForm.resx">
       <DependentUpon>AgregarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarForm.resx">
+      <DependentUpon>EditarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarForm.resx">
+      <DependentUpon>EliminarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -152,6 +170,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\assets\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assets\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assets\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assets\png-transparent-white-and-green-cross-icon-computer-icons-apple-icon-format-free-icon-add-s-miscellaneous-computer-network-trademark-thumbnail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

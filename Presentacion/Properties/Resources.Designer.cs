@@ -83,6 +83,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscar {
+            get {
+                object obj = ResourceManager.GetObject("buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cursos {
             get {
                 object obj = ResourceManager.GetObject("cursos", resourceCulture);
@@ -113,6 +123,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Instagram_logo_20221 {
+            get {
+                object obj = ResourceManager.GetObject("Instagram_logo_20221", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap marker_solid {
             get {
                 object obj = ResourceManager.GetObject("marker-solid", resourceCulture);
@@ -133,6 +153,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ojo {
+            get {
+                object obj = ResourceManager.GetObject("ojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_clipart_moodle_android_educational_icon_text_orange {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-moodle-android-educational-icon-text-orange", resourceCulture);
@@ -146,6 +176,17 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap png_transparent_material_icon_plus_icon_add_symbol_material_flat {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-material-icon-plus-icon-add-symbol-material-flat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_white_and_green_cross_icon_computer_icons_apple_icon_format_free_icon_add_s_miscellaneous_computer_network_trademark_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-white-and-green-cross-icon-computer-icons-apple-icon-format-free-" +
+                        "icon-add-s-miscellaneous-computer-network-trademark-thumbnail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

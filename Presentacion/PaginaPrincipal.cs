@@ -1,21 +1,26 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Presentacion
 {
     public partial class PaginaPrincipal : Form
     {
-       
+
 
         public PaginaPrincipal()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido a la App..");
+            MessageBox.Show("Bienvenido a la App..","Mensaje Bienvenida");
+
         }
+  
+     
+
 
         private void linkedInToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -31,9 +36,9 @@ namespace Presentacion
 
         private void VisitLinkLinkedln()
         {
-          
+
             System.Diagnostics.Process.Start("https://www.linkedin.com/in/gaston-manuel-ftacla-04b57b229/");
-            
+
         }
 
         private void instagramToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,7 +111,7 @@ namespace Presentacion
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
-           
+
         }
         private void VisitLinkInstagramMaxi()
         {
@@ -134,14 +139,56 @@ namespace Presentacion
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //boton agregar
         {
             AgregarForm agregarVentana = new AgregarForm();
             agregarVentana.ShowDialog();
         }
-    }
-    }
-    
 
-    
+        private void toolStripMenuItem3_Click(object sender, EventArgs e) // boton agregar del menu desplegable
+        {
+            AgregarForm agregarVentana = new AgregarForm();
+            agregarVentana.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e) //boton editar
+        {
+            EditarForm editarVentana = new EditarForm();
+            editarVentana.ShowDialog();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e) // boton agregar del menu desplegable
+        {
+            EditarForm editarVentana = new EditarForm();
+            editarVentana.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e) // boton eliminar
+        {
+            EliminarForm eliminarVentana = new EliminarForm();
+            eliminarVentana.ShowDialog();
+        }
+
+        private void borrarToolStripMenuItem_Click(object sender, EventArgs e) // boton eliminar del menu desplegable
+        {
+            EliminarForm eliminarVentana = new EliminarForm();
+            eliminarVentana.ShowDialog();
+        }
+
+        private void PaginaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Quiere cerrar el formulario?", "Mensaje de la App",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+    }
+
+
+
+   
+
+
+}
+
 

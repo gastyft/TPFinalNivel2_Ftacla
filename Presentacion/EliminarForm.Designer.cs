@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class AgregarForm
+    partial class EliminarForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,20 +34,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 148);
+            this.label1.Location = new System.Drawing.Point(248, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "AGREGAR";
+            this.label1.Text = "ELIMINAR";
             // 
-            // AgregarForm
+            // EliminarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "AgregarForm";
-            this.Text = "Agregar Producto";
+            this.Name = "EliminarForm";
+            this.Text = "Eliminar Producto";
             this.ResumeLayout(false);
             this.PerformLayout();
 
