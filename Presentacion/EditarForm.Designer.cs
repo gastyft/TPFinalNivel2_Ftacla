@@ -85,7 +85,7 @@
             this.aboutMaxiToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(800, 30);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -94,7 +94,7 @@
             this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acaNoSeToolStripMenuItem});
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.archivosToolStripMenuItem.Text = "Archivos";
             // 
             // acaNoSeToolStripMenuItem
@@ -112,7 +112,7 @@
             this.verDetalleToolStripMenuItem,
             this.buscarArtículosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 26);
             this.toolStripMenuItem1.Text = "Opciones";
             // 
             // toolStripMenuItem3
@@ -163,7 +163,7 @@
             this.instagramToolStripMenuItem,
             this.miPortfolioToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
             this.aboutToolStripMenuItem.Text = "About Me";
             // 
             // linkedInToolStripMenuItem
@@ -197,7 +197,7 @@
             this.campusToolStripMenuItem,
             this.cursosToolStripMenuItem});
             this.aboutMaxiToolStripMenuItem.Name = "aboutMaxiToolStripMenuItem";
-            this.aboutMaxiToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.aboutMaxiToolStripMenuItem.Size = new System.Drawing.Size(100, 26);
             this.aboutMaxiToolStripMenuItem.Text = "About Maxi";
             // 
             // instagramToolStripMenuItem1
@@ -340,6 +340,7 @@
             // 
             // BotonConfirmarEdit
             // 
+            this.BotonConfirmarEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BotonConfirmarEdit.Location = new System.Drawing.Point(314, 432);
             this.BotonConfirmarEdit.Name = "BotonConfirmarEdit";
             this.BotonConfirmarEdit.Size = new System.Drawing.Size(148, 38);
@@ -349,6 +350,7 @@
             // 
             // BotonVolverAtras
             // 
+            this.BotonVolverAtras.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BotonVolverAtras.Location = new System.Drawing.Point(468, 432);
             this.BotonVolverAtras.Name = "BotonVolverAtras";
             this.BotonVolverAtras.Size = new System.Drawing.Size(161, 38);

@@ -4,3 +4,6 @@ C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Negocio\obj\Debug\Negocio.csproj.A
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Negocio\obj\Debug\Negocio.dll
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Negocio\bin\Debug\dominio.dll
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Negocio\bin\Debug\dominio.pdb
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Negocio\obj\Debug\Negocio.csproj.CopyComplete

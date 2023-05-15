@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Windows.Forms;
-
+using Dominio;
+using Negocio;
 namespace Presentacion
 {
     public partial class PaginaPrincipal : Form
     {
 
-
+        private List<Articulo> listaArticulo;   
         public PaginaPrincipal()
         {
             InitializeComponent();
@@ -15,12 +17,58 @@ namespace Presentacion
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido a la App..","Mensaje Bienvenida");
+            cargar();
+            MessageBox.Show("Bienvenido a la App..", "Mensaje Bienvenida");
+            ArticuloNegocio negocio = new ArticuloNegocio();
+          
+           
+
 
         }
-  
-     
+        private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
+        {
 
+            if (dataGridView1.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Imagen);
+            }
+       
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pictureBox1.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pictureBox1.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
+        }
+        private void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                listaArticulo = negocio.listar();
+                dataGridView1.DataSource = listaArticulo;
+                ocultarColumnas();
+                cargarImagen(listaArticulo[0].Imagen);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        private void ocultarColumnas()
+        {
+            dataGridView1.Columns["Imagen"].Visible = false;
+            dataGridView1.Columns["Id"].Visible = false;
+        }
 
         private void linkedInToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -143,21 +191,25 @@ namespace Presentacion
         {
             AgregarForm agregarVentana = new AgregarForm();
             agregarVentana.ShowDialog();
+            cargar();
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e) // boton agregar del menu desplegable
         {
             AgregarForm agregarVentana = new AgregarForm();
             agregarVentana.ShowDialog();
+            cargar();
         }
 
         private void button2_Click(object sender, EventArgs e) //boton editar
         {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
             EditarForm editarVentana = new EditarForm();
             editarVentana.ShowDialog();
         }
 
-        private void toolStripMenuItem4_Click(object sender, EventArgs e) // boton agregar del menu desplegable
+        private void toolStripMenuItem4_Click(object sender, EventArgs e) // boton editar del menu desplegable
         {
             EditarForm editarVentana = new EditarForm();
             editarVentana.ShowDialog();
@@ -182,6 +234,8 @@ namespace Presentacion
                 e.Cancel = true;
             }
         }
+
+        
     }
 
 

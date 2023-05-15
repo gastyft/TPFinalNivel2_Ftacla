@@ -180,5 +180,15 @@
   <ItemGroup>
     <None Include="Resources\assets\png-transparent-white-and-green-cross-icon-computer-icons-apple-icon-format-free-icon-add-s-miscellaneous-computer-network-trademark-thumbnail.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\Dominio.csproj">
+      <Project>{31caffc1-c9a5-43ee-a212-f75ffa139b19}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{4c162220-3190-4664-97b1-6272528e25e1}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

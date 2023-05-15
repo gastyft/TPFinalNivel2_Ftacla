@@ -12,3 +12,8 @@ C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacio
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.PaginaPrincipal.resources
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.EditarForm.resources
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.EliminarForm.resources
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\dominio.dll
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\Negocio.dll
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\dominio.pdb
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
