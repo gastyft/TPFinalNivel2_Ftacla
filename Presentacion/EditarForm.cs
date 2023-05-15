@@ -16,5 +16,10 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void BotonVolverAtras_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
