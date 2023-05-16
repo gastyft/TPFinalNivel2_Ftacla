@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EliminarForm));
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acaNoSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +62,6 @@
             this.menuStrip2.BackColor = System.Drawing.SystemColors.Info;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivosToolStripMenuItem,
             this.toolStripMenuItem1,
             this.aboutToolStripMenuItem,
             this.aboutMaxiToolStripMenuItem});
@@ -73,20 +70,6 @@
             this.menuStrip2.Size = new System.Drawing.Size(800, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // archivosToolStripMenuItem
-            // 
-            this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acaNoSeToolStripMenuItem});
-            this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
-            this.archivosToolStripMenuItem.Text = "Archivos";
-            // 
-            // acaNoSeToolStripMenuItem
-            // 
-            this.acaNoSeToolStripMenuItem.Name = "acaNoSeToolStripMenuItem";
-            this.acaNoSeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.acaNoSeToolStripMenuItem.Text = "Aca no se";
             // 
             // toolStripMenuItem1
             // 
@@ -155,7 +138,7 @@
             // 
             this.linkedInToolStripMenuItem.Image = global::Presentacion.Properties.Resources._174857;
             this.linkedInToolStripMenuItem.Name = "linkedInToolStripMenuItem";
-            this.linkedInToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.linkedInToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.linkedInToolStripMenuItem.Text = "LinkedIn";
             this.linkedInToolStripMenuItem.ToolTipText = "Linkedln Gastón Ftacla";
             // 
@@ -163,7 +146,7 @@
             // 
             this.instagramToolStripMenuItem.Image = global::Presentacion.Properties.Resources.Instagram_logo_20221;
             this.instagramToolStripMenuItem.Name = "instagramToolStripMenuItem";
-            this.instagramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.instagramToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.instagramToolStripMenuItem.Text = "Instagram";
             this.instagramToolStripMenuItem.ToolTipText = "Instagram Gastón Ftacla";
             // 
@@ -171,7 +154,7 @@
             // 
             this.miPortfolioToolStripMenuItem.Image = global::Presentacion.Properties.Resources.portfolio;
             this.miPortfolioToolStripMenuItem.Name = "miPortfolioToolStripMenuItem";
-            this.miPortfolioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.miPortfolioToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.miPortfolioToolStripMenuItem.Text = "MiPortfolio";
             this.miPortfolioToolStripMenuItem.ToolTipText = "Portfolio Gastón Ftacla";
             // 
@@ -189,7 +172,7 @@
             // 
             this.instagramToolStripMenuItem1.Image = global::Presentacion.Properties.Resources.Instagram_logo_20221;
             this.instagramToolStripMenuItem1.Name = "instagramToolStripMenuItem1";
-            this.instagramToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.instagramToolStripMenuItem1.Size = new System.Drawing.Size(158, 26);
             this.instagramToolStripMenuItem1.Text = "Instagram";
             this.instagramToolStripMenuItem1.ToolTipText = "Instagram de MaxiPrograma";
             // 
@@ -197,7 +180,7 @@
             // 
             this.campusToolStripMenuItem.Image = global::Presentacion.Properties.Resources.png_clipart_moodle_android_educational_icon_text_orange;
             this.campusToolStripMenuItem.Name = "campusToolStripMenuItem";
-            this.campusToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.campusToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.campusToolStripMenuItem.Text = "Campus";
             this.campusToolStripMenuItem.ToolTipText = "Campus cursos de MaxiPrograma";
             // 
@@ -205,7 +188,7 @@
             // 
             this.cursosToolStripMenuItem.Image = global::Presentacion.Properties.Resources.cursos;
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.ToolTipText = "Lista de cursos disponibles de MaxiPrograma";
             // 
@@ -230,8 +213,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem archivosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acaNoSeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;

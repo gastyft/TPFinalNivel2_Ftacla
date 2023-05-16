@@ -15,6 +15,7 @@ namespace Presentacion
             InitializeComponent();
         }
 
+
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
             cargar();
@@ -205,8 +206,9 @@ namespace Presentacion
         {
             Articulo seleccionado;
             seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-            EditarForm editarVentana = new EditarForm();
+            AgregarForm editarVentana = new AgregarForm(seleccionado);
             editarVentana.ShowDialog();
+            cargar();
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e) // boton editar del menu desplegable
@@ -235,13 +237,8 @@ namespace Presentacion
             }
         }
 
-        
+      
     }
-
-
-
-   
-
 
 }
 

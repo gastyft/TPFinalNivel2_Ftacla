@@ -10,21 +10,21 @@ namespace Negocio
 {
     public class CategoriaNegocio
     {
-        public List<Categoria> listar()
+        public List<Categoria> listarC()
         {
             List<Categoria> lista = new List<Categoria>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("");
+                datos.setearConsulta("SELECT [Id],[Descripcion] FROM [CATALOGO_DB].[dbo].[CATEGORIAS]");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Categoria aux = new Categoria();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.DescripcionC = (string)datos.Lector["Categoria"]; //Ver nombre en database
+                    aux.DescripcionC = (string)datos.Lector["Descripcion"]; //Ver nombre en database
 
                     lista.Add(aux);
                 }

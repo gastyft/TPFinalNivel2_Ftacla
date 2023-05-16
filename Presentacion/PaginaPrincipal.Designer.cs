@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acaNoSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +46,7 @@
             this.campusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.EditarBoton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,29 +61,14 @@
             this.menuStrip2.BackColor = System.Drawing.SystemColors.Info;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivosToolStripMenuItem,
             this.toolStripMenuItem1,
             this.aboutToolStripMenuItem,
             this.aboutMaxiToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(873, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(873, 30);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // archivosToolStripMenuItem
-            // 
-            this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acaNoSeToolStripMenuItem});
-            this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
-            this.archivosToolStripMenuItem.Text = "Archivos";
-            // 
-            // acaNoSeToolStripMenuItem
-            // 
-            this.acaNoSeToolStripMenuItem.Name = "acaNoSeToolStripMenuItem";
-            this.acaNoSeToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.acaNoSeToolStripMenuItem.Text = "Aca no se";
             // 
             // toolStripMenuItem1
             // 
@@ -96,7 +79,7 @@
             this.verDetalleToolStripMenuItem,
             this.buscarArtículosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 26);
             this.toolStripMenuItem1.Text = "Opciones";
             // 
             // toolStripMenuItem3
@@ -149,7 +132,7 @@
             this.instagramToolStripMenuItem,
             this.miPortfolioToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
             this.aboutToolStripMenuItem.Text = "About Me";
             // 
             // linkedInToolStripMenuItem
@@ -186,7 +169,7 @@
             this.campusToolStripMenuItem,
             this.cursosToolStripMenuItem});
             this.aboutMaxiToolStripMenuItem.Name = "aboutMaxiToolStripMenuItem";
-            this.aboutMaxiToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.aboutMaxiToolStripMenuItem.Size = new System.Drawing.Size(100, 26);
             this.aboutMaxiToolStripMenuItem.Text = "About Maxi";
             // 
             // instagramToolStripMenuItem1
@@ -220,27 +203,27 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 271);
+            this.label1.Location = new System.Drawing.Point(120, 356);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Productos";
             // 
-            // button2
+            // EditarBoton
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Location = new System.Drawing.Point(467, 481);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Editar Producto ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.EditarBoton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EditarBoton.Location = new System.Drawing.Point(460, 539);
+            this.EditarBoton.Name = "EditarBoton";
+            this.EditarBoton.Size = new System.Drawing.Size(159, 30);
+            this.EditarBoton.TabIndex = 5;
+            this.EditarBoton.Text = "Editar Producto ";
+            this.EditarBoton.UseVisualStyleBackColor = true;
+            this.EditarBoton.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.Location = new System.Drawing.Point(632, 481);
+            this.button3.Location = new System.Drawing.Point(625, 539);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 30);
             this.button3.TabIndex = 6;
@@ -253,7 +236,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(295, 481);
+            this.button1.Location = new System.Drawing.Point(288, 539);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 30);
             this.button1.TabIndex = 7;
@@ -264,9 +247,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(321, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(264, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox1.Size = new System.Drawing.Size(355, 341);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -275,25 +258,29 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(85, 293);
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Location = new System.Drawing.Point(116, 375);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(691, 158);
-            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.Size = new System.Drawing.Size(653, 158);
+            this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged_1);
             // 
             // PaginaPrincipal
             // 
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(873, 562);
+            this.ClientSize = new System.Drawing.Size(873, 609);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.EditarBoton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip2);
@@ -325,7 +312,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutMeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem linkedlnToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem archivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem linkedInToolStripMenuItem;
@@ -340,12 +326,11 @@
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button EditarBoton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem verDetalleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarArtículosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acaNoSeToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
