@@ -4,6 +4,8 @@ using System.Reflection;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
+
+
 namespace Presentacion
 {
     public partial class PaginaPrincipal : Form
@@ -21,8 +23,10 @@ namespace Presentacion
             cargar();
             MessageBox.Show("Bienvenido a la App..", "Mensaje Bienvenida");
             ArticuloNegocio negocio = new ArticuloNegocio();
-          
-           
+          comboBoxCampo.Items.Add("Precio");
+            comboBoxCampo.Items.Add("Marca");
+            comboBoxCampo.Items.Add("Categoría");
+            comboBoxCampo.Items.Add("Nombre");
 
 
         }
@@ -211,23 +215,14 @@ namespace Presentacion
             cargar();
         }
 
-        private void toolStripMenuItem4_Click(object sender, EventArgs e) // boton editar del menu desplegable
-        {
-            EditarForm editarVentana = new EditarForm();
-            editarVentana.ShowDialog();
-        }
+       
 
         private void button3_Click(object sender, EventArgs e) // boton eliminar
         {
-            EliminarForm eliminarVentana = new EliminarForm();
-            eliminarVentana.ShowDialog();
+            eliminar();
         }
 
-        private void borrarToolStripMenuItem_Click(object sender, EventArgs e) // boton eliminar del menu desplegable
-        {
-            EliminarForm eliminarVentana = new EliminarForm();
-            eliminarVentana.ShowDialog();
-        }
+     
 
         private void PaginaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -237,9 +232,157 @@ namespace Presentacion
             }
         }
 
-      
+        private void eliminar(bool logico = false)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+
+                        negocio.eliminar(seleccionado.Id);
+
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void textFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = textFiltro.Text;
+
+            if (filtro.Length >= 3)
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+                    
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
+
+        private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = comboBoxCampo.SelectedItem.ToString();
+            if(opcion == "Precio")
+            {
+                comboBoxCriterio.Items.Clear();
+                comboBoxCriterio.Items.Add("Mayor a");
+                comboBoxCriterio.Items.Add("Menor a");
+                comboBoxCriterio.Items.Add("Igual a");
+            }
+            else 
+            {
+                 comboBoxCriterio.Items.Clear();
+                 comboBoxCriterio.Items.Add("Comienza con");
+                 comboBoxCriterio.Items.Add("Termina con");
+                 comboBoxCriterio.Items.Add("Contiene");
+                }
+         
+            }
+
+       
+
+        private void button2_Click_1(object sender, EventArgs e) ///Boton Filtro
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                if (validarFiltro())
+                    return;
+
+                string campo = comboBoxCampo.SelectedItem.ToString();
+                string criterio = comboBoxCriterio.SelectedItem.ToString();
+                string filtro = textFiltroA.Text;
+                dataGridView1.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private bool validarFiltro()
+        {
+            if (comboBoxCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el campo para filtrar.");
+                return true;
+            }
+            if (comboBoxCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para filtrar.");
+                return true;
+            }
+            if (comboBoxCampo.SelectedItem.ToString() == "Número")
+            {
+                if (string.IsNullOrEmpty(textFiltroA.Text))
+                {
+                    MessageBox.Show("Debes cargar el filtro para numéricos...");
+                    return true;
+                }
+                if (!(soloNumeros(textFiltroA.Text)))
+                {
+                    MessageBox.Show("Solo nros para filtrar por un campo numérico...");
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+
+        private void textFiltroA_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = textFiltro.Text;
+
+            if (filtro.Length >= 3)
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
     }
 
+
+
 }
+
+
+
+
+
 
 

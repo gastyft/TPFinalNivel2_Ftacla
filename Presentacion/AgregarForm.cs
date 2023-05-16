@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,7 @@ using System.Windows.Forms;
 using dominio;
 using Dominio;
 using Negocio;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace Presentacion
@@ -37,13 +40,15 @@ namespace Presentacion
         private void BotonConfirmarAgregar_Click(object sender, EventArgs e)
         {
             Articulo arti = new Articulo();
-            ArticuloNegocio negocio =new ArticuloNegocio();
+            ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 if (articulo == null)
                     articulo = new Articulo();
                 articulo.Nombre = textNombre.Text;
                 articulo.Codigo = textCodigo.Text;
+                articulo.Precio = decimal.Parse(textPrecio.Text);
+                articulo.Imagen = textImagen.Text;
                 articulo.Descripcion = textDescripcion.Text;
                 articulo.DescripcionM = (Marca)comboMarca.SelectedItem;
                 articulo.DescripcionC = (Categoria)comboCategoria.SelectedItem;
@@ -59,14 +64,17 @@ namespace Presentacion
                 {
                     negocio.agregar(articulo);
                     MessageBox.Show("Agregado exitosamente");
+                    Close();
                 }
+               if (archivo != null && !(textImagen.Text.ToUpper().Contains("HTTP")))
+                  File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
 
-          
+
         }
 
         private void AgregarForm_Load(object sender, EventArgs e)
@@ -83,7 +91,7 @@ namespace Presentacion
                 comboCategoria.ValueMember = "Id";
                 comboCategoria.DisplayMember = "DescripcionC";
 
-                if (articulo!= null)
+                if (articulo != null)
                 {
                     textCodigo.Text = articulo.Codigo;
                     textNombre.Text = articulo.Nombre;
@@ -100,34 +108,19 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-           private void cargarImagen(string imagen)
+        private void cargarImagen(string imagen)
+        {
+            try
             {
-                try
-                {
                 pictureBoxImagenAgregar.Load(imagen);
-                }
-                catch (Exception ex)
-                {
+            }
+            catch (Exception ex)
+            {
                 pictureBoxImagenAgregar.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
-                }
+            }
         }
 
 
-
-
-
-
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e) // boton editar del menu desplegable
-        {
-            EditarForm editarVentana = new EditarForm();
-            editarVentana.ShowDialog();
-        }
-        private void borrarToolStripMenuItem_Click(object sender, EventArgs e) // boton eliminar del menu desplegable
-        {
-            EliminarForm eliminarVentana = new EliminarForm();
-            eliminarVentana.ShowDialog();
-        }
 
         private void linkedInToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -245,9 +238,24 @@ namespace Presentacion
 
         }
 
-     
+        private void textImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(textImagen.Text);
+        }
+
+        private void botonAgregarImagen_Click(object sender, EventArgs e)
+        {
+           archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                textImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+            }
+         //   File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+        }
     }
-    }
+}
     
     
 
