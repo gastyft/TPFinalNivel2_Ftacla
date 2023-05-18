@@ -6,9 +6,11 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using dominio;
 using Dominio;
 using Negocio;
@@ -68,6 +70,10 @@ namespace Presentacion
                 }
                if (archivo != null && !(textImagen.Text.ToUpper().Contains("HTTP")))
                   File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("El campo Precio no tiene un formato válido. Por favor, ingrese un número válido.", "Error de formato");
             }
             catch (Exception ex)
             {
@@ -245,14 +251,24 @@ namespace Presentacion
 
         private void botonAgregarImagen_Click(object sender, EventArgs e)
         {
-           archivo = new OpenFileDialog();
-            archivo.Filter = "jpg|*.jpg;|png|*.png";
-            if (archivo.ShowDialog() == DialogResult.OK)
+            try
             {
-                textImagen.Text = archivo.FileName;
-                cargarImagen(archivo.FileName);
+                archivo = new OpenFileDialog();
+                archivo.Filter = "jpg|*.jpg;|png|*.png";
+                if (archivo.ShowDialog() == DialogResult.OK)
+                {
+                    textImagen.Text = archivo.FileName;
+                    
+                    cargarImagen(archivo.FileName);
+                }
+                
+                
+                File.Copy("arti-"+archivo.FileName, ConfigurationManager.AppSettings["arti-app"] +archivo.SafeFileName);
             }
-         //   File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+         
+            catch(Exception ex)
+            {
+            }   
         }
     }
 }

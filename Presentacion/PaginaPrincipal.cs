@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Reflection;
 using System.Windows.Forms;
+using System.IO;
 using Dominio;
 using Negocio;
 
@@ -11,7 +14,9 @@ namespace Presentacion
     public partial class PaginaPrincipal : Form
     {
 
-        private List<Articulo> listaArticulo;   
+        private List<Articulo> listaArticulo;
+        private OpenFileDialog archivo;
+
         public PaginaPrincipal()
         {
             InitializeComponent();
@@ -75,7 +80,7 @@ namespace Presentacion
             dataGridView1.Columns["Id"].Visible = false;
         }
 
-        private void linkedInToolStripMenuItem_Click(object sender, EventArgs e)
+        private void linkedInToolStripMenuItem_Click(object sender, EventArgs e) //Links
         {
             try
             {
@@ -85,14 +90,14 @@ namespace Presentacion
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
-        }
+        }     
 
         private void VisitLinkLinkedln()
         {
 
             System.Diagnostics.Process.Start("https://www.linkedin.com/in/gaston-manuel-ftacla-04b57b229/");
 
-        }
+        } 
 
         private void instagramToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -208,11 +213,17 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e) //boton editar
         {
-            Articulo seleccionado;
-            seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-            AgregarForm editarVentana = new AgregarForm(seleccionado);
-            editarVentana.ShowDialog();
-            cargar();
+            
+                Articulo seleccionado;
+                seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+                AgregarForm editarVentana = new AgregarForm(seleccionado);
+                editarVentana.ShowDialog();
+                cargar();
+            
+            
+              
+            
+          
         }
 
        
@@ -244,7 +255,8 @@ namespace Presentacion
                     seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
 
                         negocio.eliminar(seleccionado.Id);
-
+                   
+                        
                     cargar();
                 }
             }
@@ -252,9 +264,11 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
+        } 
+     
+      
 
-        private void textFiltro_TextChanged(object sender, EventArgs e)
+        private void textFiltro_TextChanged(object sender, EventArgs e) //Text box de filtro rapido
         {
             List<Articulo> listaFiltrada;
             string filtro = textFiltro.Text;
@@ -262,19 +276,21 @@ namespace Presentacion
             if (filtro.Length >= 3)
             {
                 listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()));
-                    
+           
             }
             else
             {
                 listaFiltrada = listaArticulo;
+                
             }
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = listaFiltrada;
+           
             ocultarColumnas();
         }
 
-        private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e) // combo box de campo 
         {
             string opcion = comboBoxCampo.SelectedItem.ToString();
             if(opcion == "Precio")
@@ -296,7 +312,7 @@ namespace Presentacion
 
        
 
-        private void button2_Click_1(object sender, EventArgs e) ///Boton Filtro
+        private void button2_Click_1(object sender, EventArgs e) //Boton Filtro Avanzado
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
@@ -309,13 +325,14 @@ namespace Presentacion
                 string filtro = textFiltroA.Text;
                 dataGridView1.DataSource = negocio.filtrar(campo, criterio, filtro);
 
+                textFiltroA.Clear();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
-        private bool validarFiltro()
+        private bool validarFiltro() 
         {
             if (comboBoxCampo.SelectedIndex < 0)
             {
@@ -355,7 +372,7 @@ namespace Presentacion
             return true;
         }
 
-        private void textFiltroA_TextChanged(object sender, EventArgs e)
+        private void textFiltroA_TextChanged(object sender, EventArgs e)  //Text box Filtro Avanzado
         {
             List<Articulo> listaFiltrada;
             string filtro = textFiltro.Text;
@@ -374,6 +391,9 @@ namespace Presentacion
             dataGridView1.DataSource = listaFiltrada;
             ocultarColumnas();
         }
+
+
+
     }
 
 
