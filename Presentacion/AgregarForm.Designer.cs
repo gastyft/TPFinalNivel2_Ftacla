@@ -87,7 +87,7 @@
             // 
             this.linkedInToolStripMenuItem.Image = global::Presentacion.Properties.Resources._174857;
             this.linkedInToolStripMenuItem.Name = "linkedInToolStripMenuItem";
-            this.linkedInToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.linkedInToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.linkedInToolStripMenuItem.Text = "LinkedIn";
             this.linkedInToolStripMenuItem.ToolTipText = "Linkedln Gastón Ftacla";
             this.linkedInToolStripMenuItem.Click += new System.EventHandler(this.linkedInToolStripMenuItem_Click_1);
@@ -96,7 +96,7 @@
             // 
             this.instagramToolStripMenuItem.Image = global::Presentacion.Properties.Resources.Instagram_logo_20221;
             this.instagramToolStripMenuItem.Name = "instagramToolStripMenuItem";
-            this.instagramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.instagramToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.instagramToolStripMenuItem.Text = "Instagram";
             this.instagramToolStripMenuItem.ToolTipText = "Instagram Gastón Ftacla";
             this.instagramToolStripMenuItem.Click += new System.EventHandler(this.instagramToolStripMenuItem_Click_1);
@@ -105,7 +105,7 @@
             // 
             this.miPortfolioToolStripMenuItem.Image = global::Presentacion.Properties.Resources.portfolio;
             this.miPortfolioToolStripMenuItem.Name = "miPortfolioToolStripMenuItem";
-            this.miPortfolioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.miPortfolioToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.miPortfolioToolStripMenuItem.Text = "MiPortfolio";
             this.miPortfolioToolStripMenuItem.ToolTipText = "Portfolio Gastón Ftacla";
             this.miPortfolioToolStripMenuItem.Click += new System.EventHandler(this.miPortfolioToolStripMenuItem_Click_1);
@@ -160,6 +160,7 @@
             // textNombre
             // 
             this.textNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textNombre.BackColor = System.Drawing.SystemColors.Info;
             this.textNombre.Location = new System.Drawing.Point(441, 106);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(293, 22);
@@ -228,6 +229,7 @@
             // textCodigo
             // 
             this.textCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textCodigo.BackColor = System.Drawing.SystemColors.Info;
             this.textCodigo.Location = new System.Drawing.Point(441, 145);
             this.textCodigo.Name = "textCodigo";
             this.textCodigo.Size = new System.Drawing.Size(293, 22);
@@ -236,6 +238,7 @@
             // textDescripcion
             // 
             this.textDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textDescripcion.BackColor = System.Drawing.SystemColors.Info;
             this.textDescripcion.Location = new System.Drawing.Point(441, 186);
             this.textDescripcion.Multiline = true;
             this.textDescripcion.Name = "textDescripcion";
@@ -245,6 +248,7 @@
             // textPrecio
             // 
             this.textPrecio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textPrecio.BackColor = System.Drawing.SystemColors.Info;
             this.textPrecio.Location = new System.Drawing.Point(441, 355);
             this.textPrecio.Name = "textPrecio";
             this.textPrecio.Size = new System.Drawing.Size(293, 22);
@@ -253,6 +257,7 @@
             // textImagen
             // 
             this.textImagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textImagen.BackColor = System.Drawing.SystemColors.Info;
             this.textImagen.Location = new System.Drawing.Point(441, 321);
             this.textImagen.Name = "textImagen";
             this.textImagen.Size = new System.Drawing.Size(293, 22);
@@ -324,6 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1070, 537);
             this.Controls.Add(this.botonAgregarImagen);
             this.Controls.Add(this.pictureBoxImagenAgregar);

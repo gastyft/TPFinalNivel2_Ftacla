@@ -82,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VerDetalleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerDetalleForm.Designer.cs">
+      <DependentUpon>VerDetalleForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarForm.resx">
       <DependentUpon>AgregarForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +98,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerDetalleForm.resx">
+      <DependentUpon>VerDetalleForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -392,8 +392,15 @@ namespace Presentacion
             ocultarColumnas();
         }
 
+        private void botonVerDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado1;
+            seleccionado1 = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+            VerDetalleForm DetalleVentana = new VerDetalleForm(seleccionado1);
+           DetalleVentana.ShowDialog();
+            cargar();
 
-
+        }
     }
 
 

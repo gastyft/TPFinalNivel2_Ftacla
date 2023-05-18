@@ -34,6 +34,7 @@ namespace Presentacion
             Text = "Modificar Articulo";
         }
 
+
         private void BotonVolverAtras_Click(object sender, EventArgs e)
         {
             Close();

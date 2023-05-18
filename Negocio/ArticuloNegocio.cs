@@ -9,13 +9,14 @@ using Dominio;
 using System.Data.SqlTypes;
 using System.ComponentModel;
 using System.Xml.Linq;
+using System.Collections;
 
 namespace Negocio
 {
     public class ArticuloNegocio
     {
 
-
+     
         public List<Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();

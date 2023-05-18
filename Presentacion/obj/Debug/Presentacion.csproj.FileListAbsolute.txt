@@ -15,3 +15,4 @@ C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\Presentacio
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\bin\Debug\Presentacion-APP.pdb
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion-APP.exe
 C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion-APP.pdb
+C:\Users\Usuario\Desktop\TPFinalNivel2_Ftacla\Presentacion\obj\Debug\Presentacion.VerDetalleForm.resources

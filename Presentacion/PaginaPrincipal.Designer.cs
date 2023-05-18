@@ -32,18 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linkedInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.instagramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPortfolioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMaxiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.instagramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.campusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.EditarBoton = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.FiltroLabel = new System.Windows.Forms.Label();
             this.textFiltro = new System.Windows.Forms.TextBox();
@@ -54,9 +47,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxCriterio = new System.Windows.Forms.ComboBox();
             this.textFiltroA = new System.Windows.Forms.TextBox();
+            this.botonVerDetalle = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkedInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.instagramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPortfolioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.instagramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.campusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -82,33 +83,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.aboutToolStripMenuItem.Text = "About Me";
             // 
-            // linkedInToolStripMenuItem
-            // 
-            this.linkedInToolStripMenuItem.Image = global::Presentacion.Properties.Resources._174857;
-            this.linkedInToolStripMenuItem.Name = "linkedInToolStripMenuItem";
-            this.linkedInToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.linkedInToolStripMenuItem.Text = "LinkedIn";
-            this.linkedInToolStripMenuItem.ToolTipText = "Linkedln Gastón Ftacla";
-            this.linkedInToolStripMenuItem.Click += new System.EventHandler(this.linkedInToolStripMenuItem_Click);
-            // 
-            // instagramToolStripMenuItem
-            // 
-            this.instagramToolStripMenuItem.Image = global::Presentacion.Properties.Resources.Instagram_logo_20221;
-            this.instagramToolStripMenuItem.Name = "instagramToolStripMenuItem";
-            this.instagramToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.instagramToolStripMenuItem.Text = "Instagram";
-            this.instagramToolStripMenuItem.ToolTipText = "Instagram Gastón Ftacla";
-            this.instagramToolStripMenuItem.Click += new System.EventHandler(this.instagramToolStripMenuItem_Click);
-            // 
-            // miPortfolioToolStripMenuItem
-            // 
-            this.miPortfolioToolStripMenuItem.Image = global::Presentacion.Properties.Resources.portfolio;
-            this.miPortfolioToolStripMenuItem.Name = "miPortfolioToolStripMenuItem";
-            this.miPortfolioToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.miPortfolioToolStripMenuItem.Text = "MiPortfolio";
-            this.miPortfolioToolStripMenuItem.ToolTipText = "Portfolio Gastón Ftacla";
-            this.miPortfolioToolStripMenuItem.Click += new System.EventHandler(this.miPortfolioToolStripMenuItem_Click);
-            // 
             // aboutMaxiToolStripMenuItem
             // 
             this.aboutMaxiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -118,33 +92,6 @@
             this.aboutMaxiToolStripMenuItem.Name = "aboutMaxiToolStripMenuItem";
             this.aboutMaxiToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.aboutMaxiToolStripMenuItem.Text = "About Maxi";
-            // 
-            // instagramToolStripMenuItem1
-            // 
-            this.instagramToolStripMenuItem1.Image = global::Presentacion.Properties.Resources.Instagram_logo_20221;
-            this.instagramToolStripMenuItem1.Name = "instagramToolStripMenuItem1";
-            this.instagramToolStripMenuItem1.Size = new System.Drawing.Size(158, 26);
-            this.instagramToolStripMenuItem1.Text = "Instagram";
-            this.instagramToolStripMenuItem1.ToolTipText = "Instagram de MaxiPrograma";
-            this.instagramToolStripMenuItem1.Click += new System.EventHandler(this.instagramToolStripMenuItem1_Click);
-            // 
-            // campusToolStripMenuItem
-            // 
-            this.campusToolStripMenuItem.Image = global::Presentacion.Properties.Resources.png_clipart_moodle_android_educational_icon_text_orange;
-            this.campusToolStripMenuItem.Name = "campusToolStripMenuItem";
-            this.campusToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
-            this.campusToolStripMenuItem.Text = "Campus";
-            this.campusToolStripMenuItem.ToolTipText = "Campus cursos de MaxiPrograma";
-            this.campusToolStripMenuItem.Click += new System.EventHandler(this.campusToolStripMenuItem_Click);
-            // 
-            // cursosToolStripMenuItem
-            // 
-            this.cursosToolStripMenuItem.Image = global::Presentacion.Properties.Resources.cursos;
-            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
-            this.cursosToolStripMenuItem.Text = "Cursos";
-            this.cursosToolStripMenuItem.ToolTipText = "Lista de cursos disponibles de MaxiPrograma";
-            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -191,18 +138,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(717, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(355, 341);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -215,7 +156,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(653, 225);
             this.dataGridView1.StandardTab = true;
@@ -304,10 +247,86 @@
             this.textFiltroA.TabIndex = 17;
             this.textFiltroA.TextChanged += new System.EventHandler(this.textFiltroA_TextChanged);
             // 
+            // botonVerDetalle
+            // 
+            this.botonVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.botonVerDetalle.Location = new System.Drawing.Point(43, 395);
+            this.botonVerDetalle.Name = "botonVerDetalle";
+            this.botonVerDetalle.Size = new System.Drawing.Size(165, 30);
+            this.botonVerDetalle.TabIndex = 18;
+            this.botonVerDetalle.Text = "Ver Detalle";
+            this.botonVerDetalle.UseVisualStyleBackColor = true;
+            this.botonVerDetalle.Click += new System.EventHandler(this.botonVerDetalle_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(701, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(355, 355);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // linkedInToolStripMenuItem
+            // 
+            this.linkedInToolStripMenuItem.Image = global::Presentacion.Properties.Resources._174857;
+            this.linkedInToolStripMenuItem.Name = "linkedInToolStripMenuItem";
+            this.linkedInToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.linkedInToolStripMenuItem.Text = "LinkedIn";
+            this.linkedInToolStripMenuItem.ToolTipText = "Linkedln Gastón Ftacla";
+            this.linkedInToolStripMenuItem.Click += new System.EventHandler(this.linkedInToolStripMenuItem_Click);
+            // 
+            // instagramToolStripMenuItem
+            // 
+            this.instagramToolStripMenuItem.Image = global::Presentacion.Properties.Resources.Instagram_logo_20221;
+            this.instagramToolStripMenuItem.Name = "instagramToolStripMenuItem";
+            this.instagramToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.instagramToolStripMenuItem.Text = "Instagram";
+            this.instagramToolStripMenuItem.ToolTipText = "Instagram Gastón Ftacla";
+            this.instagramToolStripMenuItem.Click += new System.EventHandler(this.instagramToolStripMenuItem_Click);
+            // 
+            // miPortfolioToolStripMenuItem
+            // 
+            this.miPortfolioToolStripMenuItem.Image = global::Presentacion.Properties.Resources.portfolio;
+            this.miPortfolioToolStripMenuItem.Name = "miPortfolioToolStripMenuItem";
+            this.miPortfolioToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.miPortfolioToolStripMenuItem.Text = "MiPortfolio";
+            this.miPortfolioToolStripMenuItem.ToolTipText = "Portfolio Gastón Ftacla";
+            this.miPortfolioToolStripMenuItem.Click += new System.EventHandler(this.miPortfolioToolStripMenuItem_Click);
+            // 
+            // instagramToolStripMenuItem1
+            // 
+            this.instagramToolStripMenuItem1.Image = global::Presentacion.Properties.Resources.Instagram_logo_20221;
+            this.instagramToolStripMenuItem1.Name = "instagramToolStripMenuItem1";
+            this.instagramToolStripMenuItem1.Size = new System.Drawing.Size(158, 26);
+            this.instagramToolStripMenuItem1.Text = "Instagram";
+            this.instagramToolStripMenuItem1.ToolTipText = "Instagram de MaxiPrograma";
+            this.instagramToolStripMenuItem1.Click += new System.EventHandler(this.instagramToolStripMenuItem1_Click);
+            // 
+            // campusToolStripMenuItem
+            // 
+            this.campusToolStripMenuItem.Image = global::Presentacion.Properties.Resources.png_clipart_moodle_android_educational_icon_text_orange;
+            this.campusToolStripMenuItem.Name = "campusToolStripMenuItem";
+            this.campusToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.campusToolStripMenuItem.Text = "Campus";
+            this.campusToolStripMenuItem.ToolTipText = "Campus cursos de MaxiPrograma";
+            this.campusToolStripMenuItem.Click += new System.EventHandler(this.campusToolStripMenuItem_Click);
+            // 
+            // cursosToolStripMenuItem
+            // 
+            this.cursosToolStripMenuItem.Image = global::Presentacion.Properties.Resources.cursos;
+            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.cursosToolStripMenuItem.Text = "Cursos";
+            this.cursosToolStripMenuItem.ToolTipText = "Lista de cursos disponibles de MaxiPrograma";
+            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
+            // 
             // PaginaPrincipal
             // 
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1084, 609);
+            this.Controls.Add(this.botonVerDetalle);
             this.Controls.Add(this.textFiltroA);
             this.Controls.Add(this.comboBoxCriterio);
             this.Controls.Add(this.label4);
@@ -324,6 +343,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip2);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip2;
             this.Name = "PaginaPrincipal";
@@ -334,8 +354,8 @@
             this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,6 +390,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxCriterio;
         private System.Windows.Forms.TextBox textFiltroA;
+        private System.Windows.Forms.Button botonVerDetalle;
     }
 }
 
